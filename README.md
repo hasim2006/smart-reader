@@ -73,7 +73,7 @@ Run the local development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+Open [http://localhost:3000](https://rag-application-puce.vercel.app) in your browser to view the application.
 
 ### Production Build
 
