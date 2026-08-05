@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-light: #FFFFFF;
+    --bg-dark: #0B0F19;
+    --surface-light: #FFFFFF;
+    --surface-dark: #151D2A;
+    --border-light: #E5E5E5;
+    --border-dark: #1E293B;
+    
+    /* Device Safe Area Insets for iOS Notches & Dynamic Island */
+    --sat: env(safe-area-inset-top, 0px);
+    --sab: env(safe-area-inset-bottom, 0px);
+    --sal: env(safe-area-inset-left, 0px);
+    --sar: env(safe-area-inset-right, 0px);
+  }
+
+  html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+  }
+
+  body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: var(--sat);
+    padding-bottom: var(--sab);
+    padding-left: var(--sal);
+    padding-right: var(--sar);
+    @apply font-sans bg-white text-black dark:bg-[#0B0F19] dark:text-slate-100 antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200;
+  }
+
+  /* Prevent auto-zooming on input focus in iOS Safari by setting min 16px font-size on small screens */
+  @media (max-width: 767px) {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="search"],
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
+  }
+}
+
+/* Fluid Typography Utilities using clamp() */
+.text-fluid-h1 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.text-fluid-h2 {
+  font-size: clamp(1.35rem, 3vw, 2.25rem);
+  line-height: 1.2;
+}
+
+.text-fluid-h3 {
+  font-size: clamp(1.1rem, 2.5vw, 1.75rem);
+  line-height: 1.25;
+}
+
+.text-fluid-body {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  line-height: 1.5;
+}
+
+/* Glassmorphism & High-Contrast Light Panels */
+.glass-panel {
+  @apply bg-white dark:bg-[#151D2A]/80 backdrop-blur-md border border-neutral-200 dark:border-slate-800/80;
+}
+
+.glass-panel-subtle {
+  @apply bg-white dark:bg-[#151D2A]/60 backdrop-blur-sm border border-neutral-200 dark:border-slate-800/60;
+}
+
+.glass-header {
+  @apply bg-white/95 dark:bg-[#0B0F19]/90 backdrop-blur-lg border-b border-neutral-200 dark:border-slate-800 sticky top-0 z-40;
+}
+
+/* Responsive Table Wrapper */
+.table-responsive-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Touch Target Accessibility Helpers (WCAG 2.1 AA min 44px) */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Custom enterprise scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 dark:bg-slate-700 rounded-full hover:bg-neutral-400 dark:hover:bg-slate-600 transition-colors;
+}
+
+/* Shimmer animation utility */
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.05) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Gradient & Monochrome Text Utilities */
+.text-gradient-primary {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-black via-slate-800 to-slate-900;
+}
+
+.dark .text-gradient-primary {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-brand-500;
+}
+
+.text-gradient-teal {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-emerald-600;
+}
+
+.dark .text-gradient-teal {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-500;
+}
