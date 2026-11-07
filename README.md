@@ -4,7 +4,7 @@ An enterprise-grade Retrieval-Augmented Generation (RAG) platform and landing in
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 - **Interactive RAG Search & Citations**: Real-time contextual document querying with detailed source citation drawer.
 - **Modern Dashboard & Views**: Sleek interfaces for searching, viewing documents, and reviewing analytics.
@@ -14,7 +14,7 @@ An enterprise-grade Retrieval-Augmented Generation (RAG) platform and landing in
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 ├── public/                 # Static public assets
@@ -36,7 +36,7 @@ An enterprise-grade Retrieval-Augmented Generation (RAG) platform and landing in
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -86,7 +86,7 @@ npm start
 
 ---
 
-## 🛠️ Tech Stack
+## ️ Tech Stack
 
 - **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
 - **UI Library**: [React 18](https://react.dev/)
@@ -99,7 +99,7 @@ npm start
 
 ---
 
-## 📄 License
+## License
 
 Private / Enterprise Proprietary.
 #
