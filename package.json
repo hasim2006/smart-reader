@@ -1,5 +1,5 @@
 {
-  "name": "rag-application",
+  "name": "smart-reader",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -28,5 +28,8 @@
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3"
-  }
+  },
+  "description": "Intelligent document reading assistant with speed reading modes, summarization, and typography controls.",
+  "author": "Mohammad Hasim <hasimsaudagar3@gmail.com>",
+  "homepage": "https://github.com/hasim2006/smart-reader"
 }
